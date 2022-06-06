@@ -44,7 +44,9 @@ export const SignIn: React.FC = () => {
       const tokens = await signIn(email, password);
 
       setTokens(tokens);
+
       const user = await getUser();
+
       dispatch(userActions.setUser(user));
       navigate('/profile');
     } catch (error) {

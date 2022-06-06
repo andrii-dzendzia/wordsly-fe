@@ -71,7 +71,9 @@ export const SignUp: React.FC = () => {
       });
 
       setTokens(tokens);
+
       const user = await getUser();
+
       dispatch(userActions.setUser(user));
       navigate('/profile');
     } catch (error) {
