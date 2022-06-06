@@ -1,0 +1,100 @@
+.project {
+  &__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__strings-column {
+    width: 65%;
+  }
+
+  &__strings {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__string {
+    width: 45%;
+  }
+
+  &__string-control {
+    width: 45%;
+  }
+
+  &__string-entry {
+    background-color: rgba(0, 148, 126, 0.2);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgb(0, 148, 126);
+    }
+    
+    &:-ms-input-placeholder {
+      color: rgb(0, 148, 126);
+    }
+    
+    &::placeholder {
+      color: rgb(0, 148, 126);
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+  }
+
+  &__pagination-button {
+    &:hover {
+      background-color: rgba(0, 148, 126, 0.1);
+      color: rgb(0, 148, 126);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &__pagination-page {
+    padding: 0 10px;
+  }
+
+  &__info-column {
+    width: 30%;
+    overflow-wrap: anywhere;
+  }
+
+  &__info-footer {
+    justify-content: center;
+    width: 100%;
+    border: none;
+    border-radius: 0 0 4px 4px;
+
+    &:hover {
+      background-color: rgb(138, 255, 237);
+      color: rgb(0, 148, 126);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: rgb(138, 255, 237);
+      color: white;
+    }
+  }
+
+  &__selected-string {
+    border-color: rgb(138, 255, 237);
+  }
+
+  &__error {
+    padding: 0 1rem;
+  }
+}

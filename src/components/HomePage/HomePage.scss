@@ -1,0 +1,50 @@
+.home {
+  &__title {
+    margin-top: 6rem;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-left: 6rem;
+
+    @media (max-width: 1023px) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    margin-top: 4rem;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: rgba(0, 148, 126, 0.1);
+      color: rgb(0, 148, 126);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 65%;
+  }
+}

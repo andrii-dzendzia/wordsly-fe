@@ -1,0 +1,8 @@
+html {
+  background-color: #171717;
+  overflow-y: auto;
+}
+
+input:-webkit-autofill {
+  transition: background-color 10000s, color 10000s;
+}

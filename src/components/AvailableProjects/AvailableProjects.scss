@@ -1,0 +1,27 @@
+.projects {
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__select {
+    width: 270px;
+  }
+
+  &__choose {
+    color: rgb(138, 255, 237);
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: rgb(21, 36, 34);
+    }
+  }
+}

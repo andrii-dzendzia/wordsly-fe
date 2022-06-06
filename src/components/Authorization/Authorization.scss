@@ -1,0 +1,39 @@
+.authorization {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__error {
+    padding: 0 1rem;
+  }
+
+  &__button {
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: rgba(0, 148, 126, 0.1);
+      color: rgb(0, 148, 126);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &__placeholder {
+    & select {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

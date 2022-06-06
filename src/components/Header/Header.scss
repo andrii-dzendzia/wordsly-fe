@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    line-height: 1;
+    padding: 1rem 2rem;
+    transition: color 0.2s linear;
+  }
+
+  &__sign-in {
+    padding: 1rem 2rem;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: rgb(0, 148, 126);
+    }
+  }
+}

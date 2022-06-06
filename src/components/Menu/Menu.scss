@@ -1,0 +1,31 @@
+.menu {
+  &__button {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(0, 148, 126);
+    }
+  }
+
+  &__box {
+    margin-right: 1rem;
+  }
+
+  &__content {
+    background-color: rgb(21, 36, 34);
+    border: 1px solid rgba(0, 148, 126, 0.2);
+  }
+
+  &__item {
+    color: white;
+
+    &:hover {
+      background-color: #00947E;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+$spacing-values: (
+  "0": 0,
+  "1": 0.25rem,
+  "2": 0.5rem,
+  "3": 0.75rem,
+  "4": 1rem,
+  "5": 1.5rem,
+  "6": 3rem,
+  "7": 4rem,
+  "8": 5rem,
+  "9": 6rem);
+
+$input-color: $white;
+$input-background-color: $graphite;
+$input-border-color: $primary-dark;
+$input-focus-border-color: $primary-dark;
+$input-focus-box-shadow-color: rgba($primary-dark, 0.25);
+$input-arrow: $primary-dark;
+$input-hover-color: $white;
+$input-radius: 2rem;
+
+$button-color: $white;
+$button-background-color: $primary-dark;
+$button-border-color: $primary-dark;
+$button-focus-color: $white;
+$button-focus-border-color: transparent;
+$button-focus-box-shadow-color: rgba($primary-dark, 0.25);
+$button-disabled-background-color: $primary-dark;
+$button-disabled-border-color: $primary-dark;
+
+$dropdown-item-hover-background-color: $primary-dark;
+$dropdown-item-hover-color: $white;
+$dropdown-divider-background-color: rgba($primary-dark, 0.2);
+
+$file-border-color: $primary-dark;
+$file-radius: 2rem;
+$file-cta-background-color: $primary-dark;
+$file-cta-color: $white;
+$file-name-border-color: $primary-dark;
+
+$card-radius: 2rem;
+$card-color: $white;
+$card-background-color: $primary-dark;
+$card-header-color: $white;
+$card-footer-border-top: 1px solid rgb(1, 134, 114);
+
+$table-color: $white;
+$table-head-cell-color: $white;
+$table-background-color: rgba($primary-dark, 0.1);
+$table-row-hover-background-color: $primary-dark;
+
+$message-background-color: rgba($primary-dark, 0.2);
+$message-body-border-color: $primary-dark;
+$message-header-background-color: $primary-dark;
+
+$tabs-boxed-link-active-background-color: $primary-dark;
+$tabs-boxed-link-active-border-color: $primary-dark;
+$tabs-link-active-color: $white;
+$tabs-boxed-link-hover-background-color: rgb(138, 255, 237);
+$tabs-border-bottom-color: $primary-dark;
