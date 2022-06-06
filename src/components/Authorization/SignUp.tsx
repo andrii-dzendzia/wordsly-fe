@@ -8,6 +8,7 @@ import { emailTest, passwordTest } from '../../RegExps';
 import { userActions } from '../../store/user';
 import { setTokens } from '../../tokenHandler';
 import './Authorization.scss';
+import { getUser } from '../../api/user';
 
 export const SignUp: React.FC = () => {
   const handleError = useErrorHandler();
@@ -70,7 +71,8 @@ export const SignUp: React.FC = () => {
       });
 
       setTokens(tokens);
-      dispatch(userActions.loadUser());
+      const user = await getUser();
+      dispatch(userActions.setUser(user));
       navigate('/profile');
     } catch (error) {
       handleError(error);
