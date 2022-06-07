@@ -8,7 +8,7 @@ const request = async (url: string, options?: RequestInit): Promise<Blob> => {
   const response = await fetch(url, newOptions);
 
   if (!response.ok) {
-    throw new Error(await response.text());
+    throw new Error((await response.json()).errorMessage);
   }
 
   return response.blob();
