@@ -1,0 +1,29 @@
+.languages {
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__table-button {
+    color: rgb(138, 255, 237);
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: rgb(21, 36, 34);
+    }
+  }
+
+  &__background {
+    position: sticky;
+    top: 200px;
+    margin-left: 20px;
+  }
+}

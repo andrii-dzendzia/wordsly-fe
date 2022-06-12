@@ -1,6 +1,6 @@
 import { AnyAction, Dispatch } from 'redux';
 import { getUser } from '../api/user';
-import { getRefreshToken } from '../tokenHandler';
+import { getRefreshToken, setRole } from '../tokenHandler';
 import { User, State } from '../types';
 
 enum ActionTypes {
@@ -17,8 +17,10 @@ export const userActions = {
     if (getRefreshToken()) {
       const user = await getUser();
 
+      setRole(user.accountType.toString());
       dispatch(userActions.setUser(user));
     } else {
+      setRole('');
       dispatch(userActions.setUser(null));
     }
   },

@@ -6,7 +6,7 @@ import {
   Project,
 } from '../types';
 import { ProjectStatus } from '../enums';
-import { translatorApi } from './apis';
+import { adminApi, translatorApi } from './apis';
 import { request } from './baseWithAuthorization';
 
 export const getProjectStrings = (
@@ -93,4 +93,29 @@ export const joinProject = (projectId: number, targetLangId: number): Promise<vo
       'Content-Type': 'application/json',
     },
   });
+};
+
+export const getAdminProjects = (
+  subjectId: number,
+  sourceLangId: number,
+  targetLangId: number,
+  projectStatus? : ProjectStatus,
+  userId?: number,
+  isTranslator?: boolean,
+): Promise<Project[]> => {
+  let url = `${adminApi}/api/Projects?subjectId=${subjectId}&sourceLangId=${sourceLangId}&targetLangId=${targetLangId}`;
+
+  if (projectStatus !== undefined) {
+    url = `${url}&projectStatus=${projectStatus}`;
+  }
+
+  if (userId !== undefined) {
+    url = `${url}&userId=${userId}`;
+  }
+
+  if (isTranslator !== undefined) {
+    url = `${url}&isTranslator=${isTranslator}`;
+  }
+
+  return request(url);
 };

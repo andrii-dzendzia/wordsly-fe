@@ -1,0 +1,52 @@
+.subjects {
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__table-button {
+    color: rgb(138, 255, 237);
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: rgb(21, 36, 34);
+    }
+  }
+
+  &__input {
+    width: 400px;
+  }
+
+  &__add {
+    width: 150px;
+    align-self: flex-end;
+
+    &:hover {
+      background-color: rgba(0, 148, 126, 0.1);
+      color: rgb(0, 148, 126);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &__new-subject-container{
+    margin-left: 30px;
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: fit-content;
+  }
+}

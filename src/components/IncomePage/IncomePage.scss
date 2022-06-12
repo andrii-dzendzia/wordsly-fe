@@ -1,0 +1,74 @@
+.income {
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1072px;
+    margin: auto;
+  }
+
+  &__projects-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 148, 126, 0.1);
+    padding: 0 5px 15px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__projects-info-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__personal-info-title {
+    margin-bottom: 25px;
+  }
+
+  &__pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px 128px;
+    margin-bottom: 30px;
+  }
+
+  &__language-select {
+    margin-top: 10px;
+  }
+
+  &__select {
+    width: 472px;
+  }
+
+  &__input {
+    width: 472px;
+    margin-top: 10px;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  &__update {
+    width: 191px;
+
+    &:hover {
+      background-color: rgba(0, 148, 126, 0.1);
+      color: rgb(0, 148, 126);
+      border-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+  }
+}
