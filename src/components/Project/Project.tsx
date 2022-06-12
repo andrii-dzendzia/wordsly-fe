@@ -33,7 +33,6 @@ export const Project : React.FC = () => {
   const navigate = useNavigate();
   const user = useSelector(userSelectors.getUser);
   const languages = useSelector(languagesSelectors.getLanguages);
-  const isCustomer = user?.accountType === AccountType.User;
   const { id, lang } = useParams();
   const [page, setPage] = useState(1);
   const [notFound, setNotFound] = useState(false);
@@ -47,6 +46,9 @@ export const Project : React.FC = () => {
   const [comment, setComment] = useState('');
   const [stringsConnection, setStringsConnection] = useState<HubConnection>();
   const [commentsConnection, setCommentsConnection] = useState<HubConnection>();
+
+  const isNotCustomer = useMemo(() => user?.accountType !== AccountType.User, [user]);
+  const isNotTranslator = useMemo(() => user?.accountType !== AccountType.Translator, [user]);
 
   useEffect(() => {
     (async () => {
@@ -177,7 +179,7 @@ export const Project : React.FC = () => {
     }
 
     if (
-      !isCustomer
+      isNotCustomer
       && stringsConnection?.state === HubConnectionState.Connected
       && id
       && lang
@@ -188,7 +190,7 @@ export const Project : React.FC = () => {
 
     return () => {
       if (
-        !isCustomer
+        isNotCustomer
         && stringsConnection?.state === HubConnectionState.Connected
         && id
         && lang
@@ -347,7 +349,7 @@ export const Project : React.FC = () => {
                       Is translating...
                     </span>
                   </p>
-                ) : (!isCustomer && selectedStringId === str.id ? (
+                ) : (isNotTranslator && selectedStringId === str.id ? (
                   <div className="project__string-control control">
                     <textarea
                       className={classNames('project__string-entry textarea has-fixed-size', { 'is-danger': !!translationError })}

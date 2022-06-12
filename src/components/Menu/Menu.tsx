@@ -116,6 +116,48 @@ export const Menu: React.FC = () => {
             </Link>
           </div>
         )}
+
+        {user.accountType === AccountType.Admin && (
+          <div className="menu__content dropdown-content">
+            <Link to="/" className="menu__item dropdown-item">
+              Income
+            </Link>
+            <hr className="dropdown-divider" />
+
+            <Link to="/projects" className="menu__item dropdown-item">
+              Projects
+            </Link>
+            <hr className="dropdown-divider" />
+
+            <Link to="/languages" className="menu__item dropdown-item">
+              Languages
+            </Link>
+            <hr className="dropdown-divider" />
+
+            <Link to="/subjects" className="menu__item dropdown-item">
+              Subjects
+            </Link>
+            <hr className="dropdown-divider" />
+
+            <Link to="/users" className="menu__item dropdown-item">
+              Users
+            </Link>
+            <hr className="dropdown-divider" />
+
+            <Link to="/translators" className="menu__item dropdown-item">
+              Translators
+            </Link>
+            <hr className="dropdown-divider" />
+
+            <Link
+              to="/"
+              className="menu__item dropdown-item"
+              onClick={handleLogOut}
+            >
+              Log out
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

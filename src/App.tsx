@@ -36,6 +36,25 @@ export const App: React.FC = () => {
     })();
   }, []);
 
+  if (user?.accountType == AccountType.Admin) {
+    return (
+      <ErrorBoundary FallbackComponent={FallbackComponent}>
+        <Routes>
+          <Route path="/" element={<Income />} />
+          <Route path="/languages" element={<Income />} />
+          <Route path="/subjects" element={<Income />} />
+          <Route path="/users" element={<Income />} />
+          <Route path="/user/:id" element={<Income />} />
+          <Route path="/translators" element={<Income />} />
+          <Route path="/translator/:id" element={<Income />} />
+          <Route path="/projects" element={<AdminProjects />} />
+          <Route path="/project/:id/:lang" element={<Project />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </ErrorBoundary>
+    );
+  }
+
   return (
     <ErrorBoundary FallbackComponent={FallbackComponent}>
       <Routes>
