@@ -237,7 +237,7 @@ export const Projects: React.FC<Props> = ({ userId, isTranslator }) => {
         <tbody>
           {projects.map(project => {
             return (
-              <tr key={project.id + project.targetLanguage.id}>
+              <tr key={project.id + project.targetLanguage.languageCode}>
                 <td>{project.fileName}</td>
                 <td>{project.sourceLanguage.language}</td>
                 <td>{project.targetLanguage.language}</td>
