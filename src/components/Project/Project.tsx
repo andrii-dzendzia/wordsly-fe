@@ -349,7 +349,7 @@ export const Project : React.FC = () => {
                       Is translating...
                     </span>
                   </p>
-                ) : (isNotTranslator && selectedStringId === str.id ? (
+                ) : (isNotCustomer && selectedStringId === str.id ? (
                   <div className="project__string-control control">
                     <textarea
                       className={classNames('project__string-entry textarea has-fixed-size', { 'is-danger': !!translationError })}
@@ -409,7 +409,7 @@ export const Project : React.FC = () => {
                 {projectInfo?.preferences}
               </div>
             )}
-            {user.accountType !== AccountType.Translator && (
+            {isNotTranslator && (
               <button
                 type="button"
                 className="project__info-footer message-header"
