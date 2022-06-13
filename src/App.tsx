@@ -68,16 +68,16 @@ export const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/quote" element={<Quote />} />
-        {!user ? (
+        {!getRole() ? (
           <>
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/sign-up" element={<SignUp />} />
           </>
         ) : (
           <>
-            <Route path="/profile" element={user?.accountType === AccountType.User ? <UserProfile /> : <TranslatorProfile />} />
+            <Route path="/profile" element={getRole() === AccountType.User.toString() ? <UserProfile /> : <TranslatorProfile />} />
             <Route path="/project/:id/:lang" element={<Project />} />
-            <Route path="/projects/my" element={user?.accountType === AccountType.User ? <UserProjects /> : <TranslatorProjects />} />
+            <Route path="/projects/my" element={getRole() === AccountType.User.toString() ? <UserProjects /> : <TranslatorProjects />} />
             <Route path="/projects" element={<AvailableProjects />} />
           </>
         )}
